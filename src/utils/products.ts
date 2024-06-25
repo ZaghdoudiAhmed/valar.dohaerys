@@ -3,7 +3,7 @@ const FAIROUZ_TSHIRT = require('../../public/mockup_tshirt_Blanc_Feirouz.jpg');
 const ALIEN_TSHIRT = require('../../public/mockup_tshirt_rose_epeche_alien.jpg');
 const GIRL_PURPULE = require('../../public/mockup_tshirt_mauve.jpg');
 const PALESTINE_TSHIRT = require('../../public/mockup_tshirt_Blanc_palest_2.jpg');
-
+const BASIC_TSHIRTS = require('../../public/md-salman-tWOz2_EK5EQ-unsplash.jpg');
 export interface Product {
   id: number;
   name: string;
@@ -16,7 +16,7 @@ export const Products = [
   {
     id: 1,
     name: 'basic t-shirt',
-    picture: TENNIS_TSHIRT,
+    picture: BASIC_TSHIRTS,
     showColors: true,
     price: 22,
     currency: 'TND',

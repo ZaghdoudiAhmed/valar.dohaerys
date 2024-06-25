@@ -10,7 +10,7 @@ export async function TopBar() {
       <div className="max-w-containesr-lg mx-auto flex items-center justify-between px-4">
         <Link
           prefetch={false}
-          href="/home"
+          href="/"
           className="text-2xl font-bold font-IBMPlex text-valar1 hover:text-valar2"
         >
           Valar.dohaerys

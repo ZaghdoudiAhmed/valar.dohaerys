@@ -1,8 +1,13 @@
-const ShopingCart = () => {
+interface ShoppingCartProps {
+  openCart: boolean;
+  setOpenCart: any;
+}
+
+const ShoppingCart = ({ openCart, setOpenCart }: ShoppingCartProps) => {
   return (
     <div
       className="relative z-10"
-      aria-labelledby="slide-over-title"
+      aria-labelledby="slide-over-title "
       role="dialog"
       aria-modal="true"
     >
@@ -25,6 +30,7 @@ const ShopingCart = () => {
                     </h2>
                     <div className="ml-3 flex h-7 items-center">
                       <button
+                        onClick={() => setOpenCart(!openCart)}
                         type="button"
                         className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
                       >
@@ -102,6 +108,7 @@ const ShopingCart = () => {
                   </p>
                   <div className="mt-6">
                     <a
+                      onClick={() => setOpenCart(!openCart)}
                       href="#"
                       className="flex items-center justify-center rounded-md border border-black font-IBMPlex  bg-valar3 px-6 py-3 text-base font-medium text-black shadow-sm hover:bg-transparent"
                     >
@@ -130,4 +137,4 @@ const ShopingCart = () => {
   );
 };
 
-export default ShopingCart;
+export default ShoppingCart;
