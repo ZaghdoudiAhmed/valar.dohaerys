@@ -1,15 +1,12 @@
 'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 
 const NavBar = () => {
-  const [openDropdown, setOpenDropdown] = useState(null);
-
   const links = [
     {
       id: 1,
       title: 'home',
-      href: '/home',
+      href: '/',
     },
     {
       id: 2,
@@ -19,22 +16,22 @@ const NavBar = () => {
     {
       id: 3,
       title: 'hoodies',
-      href: '/collection/hoodies',
+      href: '/hoodies',
     },
     {
       id: 3,
       title: 't-shirts',
-      href: '/collection/t-shirts',
+      href: '/t-shirts',
     },
     {
       id: 4,
       title: 'tote bags',
-      href: '/collection/tote-bags',
+      href: '/tote-bags',
     },
     {
       id: 5,
       title: 'mugs',
-      href: '/collection/mugs',
+      href: '/mugs',
     },
   ];
 
