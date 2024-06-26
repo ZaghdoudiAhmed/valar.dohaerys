@@ -12,11 +12,11 @@ export function Footer() {
       <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div className="flex-col space-y-5 ">
-            <p className="text-md font-IBMPlex font-bold">
+            <p className="text-xl font-IBMPlex font-bold">
               Tunisian brand offering high quality of clothing ✨
             </p>
             <p>
-              <span className="text-xs font-IBMPlex  uppercase tracking-wide text-gray-500">
+              <span className="text-md font-IBMPlex  uppercase tracking-wide text-gray-500">
                 Call us
               </span>
               <a
@@ -26,7 +26,7 @@ export function Footer() {
                 +216 27 224 119
               </a>
             </p>
-            <ul className="mt-8 space-y-1 text-md font-IBMPlex font-semibold text-gray-700">
+            <ul className="mt-8 space-y-1 text-xl font-IBMPlex font-semibold text-gray-700">
               <li>Delivery for all Tunisia 🚀 🇹🇳</li>
             </ul>
             <ul className="mt-8 flex gap-6">

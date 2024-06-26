@@ -15,6 +15,11 @@ const DISNEY_TSHIRT_2 = require('@/assets/mockup_tshirt_bleu_ciel_3.jpg');
 
 const COLLAGE_TSHIRT = require('@/assets/mockup_tshirt_beige_collage.jpg');
 const COLLAGE_TSHIRT_2 = require('@/assets/mockup_tshirt_rouge_bordeau_collage.jpg');
+
+const CAIROKEE_TSHIRT = require('@/assets/mockup_tshirt_Camel_1.jpg');
+const CAIROKEE_TSHIRT_2 = require('@/assets/mockup_tshirt_Camel_2.jpg');
+
+const LUFY_TSHIRT = require('@/assets/mockup_tshirt_Blanc_luffy.jpg');
 export interface Product {
   id: number;
   name: string;
@@ -92,6 +97,21 @@ export const Products = [
     name: 'Collage Artists t-shirt',
     picture: COLLAGE_TSHIRT,
     picture2: COLLAGE_TSHIRT_2,
+    price: 39,
+    currency: 'TND',
+  },
+  {
+    id: 10,
+    name: 'Cairokee t-shirt',
+    picture: CAIROKEE_TSHIRT,
+    picture2: CAIROKEE_TSHIRT_2,
+    price: 45,
+    currency: 'TND',
+  },
+  {
+    id: 11,
+    name: 'Luffy t-shirt',
+    picture: LUFY_TSHIRT,
     price: 39,
     currency: 'TND',
   },

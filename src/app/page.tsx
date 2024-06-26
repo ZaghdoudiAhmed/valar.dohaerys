@@ -1,3 +1,5 @@
+import TestimonialSection from '@/components/TestimonialsSection';
+
 export default function Home() {
   return (
     <section className="p-5">
@@ -98,6 +100,7 @@ export default function Home() {
           </li>
         </ul>
       </div>
+      <TestimonialSection />
     </section>
   );
 }
