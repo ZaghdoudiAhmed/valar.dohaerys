@@ -26,6 +26,7 @@ const ProductSection = ({ title, description }: ProductSectionProps) => {
               price={product.price}
               currency={product.currency}
               picture={product.picture}
+              picture2={product.picture2!}
               showColors={product.showColors!}
             />
           ))}

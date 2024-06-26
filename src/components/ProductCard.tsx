@@ -7,6 +7,7 @@ interface ProductCardProps {
   price: number;
   currency: string;
   picture: any;
+  picture2?: any;
   showColors?: boolean;
 }
 const ProductCard = ({
@@ -14,17 +15,26 @@ const ProductCard = ({
   price,
   currency,
   picture,
+  picture2,
   showColors,
 }: ProductCardProps) => {
   return (
     <li>
       <a href="#" className="group block overflow-hidden">
-        <Image
-          alt="product"
-          src={picture}
-          className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-        />
-
+        <div className="relative h-[350px] sm:h-[450px]">
+          <Image
+            alt="product"
+            src={picture}
+            className={`absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-100 ${
+              picture2 ? 'group-hover:opacity-0' : ''
+            }`}
+          />
+          <Image
+            alt="product"
+            src={picture2}
+            className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-0 group-hover:opacity-100"
+          />
+        </div>
         {showColors && (
           <div className="mt-5 flex gap-1">
             <form>
