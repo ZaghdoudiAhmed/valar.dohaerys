@@ -1,41 +1,109 @@
 'use client';
 
+import { Product } from '@/utils/products';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 interface ProductCardProps {
-  name: string;
-  price: number;
-  currency: string;
-  picture: any;
-  picture2?: any;
-  showColors?: boolean;
+  product: Product;
 }
-const ProductCard = ({
-  name,
-  price,
-  currency,
-  picture,
-  picture2,
-  showColors,
-}: ProductCardProps) => {
+const ProductCard = ({ product }: ProductCardProps) => {
+  const [selectedColor, setSelectedColor] = useState<string | null>('#fff');
+
+  useEffect(() => {
+    if (product && product.colors && product.colors.length > 0) {
+      console.log('1');
+      setSelectedColor(product.colors[0].refColor);
+    }
+  }, [product]);
+
+  const handleColorChange = (colorRef: string) => {
+    setSelectedColor(colorRef === selectedColor ? null : colorRef);
+  };
+
   return (
     <li>
       <a href="#" className="group block overflow-hidden">
         <div className="relative h-[350px] sm:h-[450px]">
-          <Image
-            alt="product"
-            src={picture}
-            className={`absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-100 ${
-              picture2 ? 'group-hover:opacity-0' : ''
-            }`}
-          />
-          <Image
-            alt="product"
-            src={picture2}
-            className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-0 group-hover:opacity-100"
-          />
+          {product.showColorsBasics && !product.picture2 ? (
+            <>
+              <Image
+                alt="product"
+                src={product.picture}
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-100 "
+              />
+            </>
+          ) : (
+            <>
+              <Image
+                alt="product"
+                src={product.picture}
+                className={`absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-100 ${
+                  product.picture2 ? 'group-hover:opacity-0' : ''
+                }`}
+              />
+              <Image
+                alt="product"
+                src={product.picture2}
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-0 group-hover:opacity-100"
+              />
+            </>
+          )}
+          {product.showColors && product.colors && selectedColor ? (
+            <>
+              {product.colors.map((colorOption) =>
+                colorOption.refColor === selectedColor
+                  ? colorOption.items.map((item: any) => (
+                      <>
+                        <Image
+                          alt="product"
+                          src={item.picture}
+                          className={`absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-100 ${
+                            product.picture2 ? 'group-hover:opacity-0' : ''
+                          }`}
+                        />
+                        <Image
+                          alt="product"
+                          src={item.picture2}
+                          className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-0 group-hover:opacity-100"
+                        />
+                      </>
+                    ))
+                  : null
+              )}
+            </>
+          ) : null}
         </div>
-        {showColors && (
+        {product.showColors && (
+          <div className="mt-5 flex gap-1">
+            <form>
+              <fieldset>
+                <legend className="sr-only">Color</legend>
+              </fieldset>
+              <div className="flex flex-wrap justify-center gap-1 [&:hover_label]:opacity-75">
+                {product.colors.map((color: any, index: number) => (
+                  <div key={index}>
+                    <input
+                      type="checkbox"
+                      id={`color-${color.refColor}`}
+                      className="sr-only"
+                      onClick={() => handleColorChange(color.refColor)}
+                      checked={selectedColor === color.refColor}
+                    />
+                    <label
+                      htmlFor={`color-${color.refColor}`}
+                      className={`block size-4 cursor-pointer border-black border rounded-full bg-[${color.refColor}] transition hover:!opacity-100`}
+                    >
+                      <span className="sr-only"> {color.name} </span>
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </form>
+          </div>
+        )}
+
+        {product.showColorsBasics && (
           <div className="mt-5 flex gap-1">
             <form>
               <fieldset>
@@ -93,17 +161,20 @@ const ProductCard = ({
         )}
         <div className="relative bg-white pt-3">
           <h3 className="text-md font-LuckiestGuy text-gray-700 group-hover:underline group-hover:underline-offset-4 group-hover:text-valar3">
-            {name}
+            {product.name}
           </h3>
           <p className="mt-2">
             <span className="sr-only"> Regular Price </span>
             <span className="tracking-wider text-gray-900 font-BlackOps text-md">
-              {`${price} ${currency}`}
+              {`${product.price} ${product.currency}`}
             </span>
           </p>
-          <span className="mt-3 inline-block bg-black px-5 py-3 text-xs font-medium font-IBMPlex uppercase tracking-wide text-white">
+          <button
+            onClick={() => console.log('aa')}
+            className="mt-3 inline-block bg-black px-5 py-3 text-xs font-medium font-IBMPlex uppercase tracking-wide text-white"
+          >
             Add to bag
-          </span>
+          </button>
         </div>
       </a>
     </li>

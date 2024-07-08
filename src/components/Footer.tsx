@@ -84,7 +84,7 @@ export function Footer() {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="/t-shirts"
                     className="text-gray-700 font-IBMPlex capitalize transition hover:text-valar3 hover:underline hover:opacity-75"
                   >
                     T-shirts
@@ -92,7 +92,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/hoodies"
                     className="text-gray-700 font-IBMPlex capitalize transition hover:text-valar3 hover:underline hover:opacity-75"
                   >
                     Hoodies
@@ -100,7 +100,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/tote-bags"
                     className="text-gray-700 font-IBMPlex capitalize transition hover:text-valar3 hover:underline hover:opacity-75"
                   >
                     Tote bags
@@ -108,7 +108,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/mugs"
                     className="text-gray-700 font-IBMPlex capitalize transition hover:text-valar3 hover:underline hover:opacity-75"
                   >
                     Mugs

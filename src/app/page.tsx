@@ -6,7 +6,7 @@ export default function Home() {
       <div>
         <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
-            <div className="relative z-10 lg:py-16">
+            <div className="relative lg:z-10 lg:py-16">
               <div className="relative h-64 sm:h-80 lg:h-full">
                 <img
                   src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/db562acf-abe8-47af-88a5-27d210e3b0bb/d7unkqe-830b81a1-fae9-4eef-99b8-3959d4bacbea.jpg/v1/fill/w_1024,h_1027,q_75,strp/valar_morghulis__valar_dohaeris_by_iloverogertaylor_d7unkqe-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RiNTYyYWNmLWFiZTgtNDdhZi04OGE1LTI3ZDIxMGUzYjBiYlwvZDd1bmtxZS04MzBiODFhMS1mYWU5LTRlZWYtOTliOC0zOTU5ZDRiYWNiZWEuanBnIiwiaGVpZ2h0IjoiPD0xMDI3Iiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvZGI1NjJhY2YtYWJlOC00N2FmLTg4YTUtMjdkMjEwZTNiMGJiXC9pbG92ZXJvZ2VydGF5bG9yLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.rw-vE2XVFEhHjaLusvz7YCALIkOU9mXz7th-lpSfcpY"
@@ -51,7 +51,7 @@ export default function Home() {
         </header>
         <ul className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
           <li>
-            <a href="/" className="group relative block">
+            <a href="/tote-bags" className="group relative block">
               <img
                 src="https://images.unsplash.com/photo-1610282081854-9c311350beb9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRvdGUlMjBiYWdzfGVufDB8fDB8fHww"
                 className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
@@ -67,7 +67,7 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a href="/" className="group relative block">
+            <a href="/mugs" className="group relative block">
               <img
                 src="https://images.unsplash.com/photo-1530968831187-a937ade474cb?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
@@ -83,7 +83,7 @@ export default function Home() {
             </a>
           </li>
           <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-            <a href="/" className="group relative block">
+            <a href="/t-shirts" className="group relative block">
               <img
                 src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
@@ -100,6 +100,57 @@ export default function Home() {
           </li>
         </ul>
       </div>
+
+      <section className="bg-white">
+        <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold font-IBMPlex text-gray-900 sm:text-4xl">
+              Trusted by eCommerce Businesses
+            </h2>
+
+            <p className="mt-4 text-gray-500 font-IBMPlex sm:text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+              dolores laborum labore provident impedit esse recusandae facere
+              libero harum sequi.
+            </p>
+          </div>
+
+          <div className="mt-8 sm:mt-12">
+            <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:divide-x sm:divide-gray-100">
+              <div className="flex flex-col px-4 py-8 text-center">
+                <dt className="order-last text-lg  font-IBMPlex font-medium text-gray-500">
+                  Total Sales
+                </dt>
+
+                <dd className="text-4xl font-BlackOps font-extrabold text-blue-600 md:text-5xl">
+                  $4.8m
+                </dd>
+              </div>
+
+              <div className="flex flex-col px-4 py-8 text-center">
+                <dt className="order-last text-lg font-medium text-gray-500">
+                  Official Addons
+                </dt>
+
+                <dd className="text-4xl font-BlackOps font-extrabold text-blue-600 md:text-5xl">
+                  24
+                </dd>
+              </div>
+
+              <div className="flex flex-col px-4 py-8 text-center">
+                <dt className="order-last text-lg font-medium text-gray-500">
+                  Total Addons
+                </dt>
+
+                <dd className="text-4xl font-BlackOps font-extrabold text-blue-600 md:text-5xl">
+                  86
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
       <TestimonialSection />
     </section>
   );

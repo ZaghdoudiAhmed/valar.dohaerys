@@ -2,24 +2,132 @@
 import Link from 'next/link';
 import NavBar from './NavBar';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
-export async function TopBar() {
+interface TopBarProps {
+  itemCount: number;
+}
+export async function TopBar({ itemCount }: TopBarProps) {
   const router = useRouter();
   return (
-    <header className="hidden p-4  bg-white md:block border-b ">
-      <div className="max-w-containesr-lg mx-auto flex items-center justify-between px-4">
-        <Link
-          prefetch={false}
-          href="/"
-          className="text-2xl font-bold font-IBMPlex text-valar1 hover:text-valar2"
-        >
-          Valar.dohaerys
-        </Link>
-        <div>
+    <>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      />
+
+      <div className="bg-gray-100 px-4 py-3">
+        <div className="mx-auto flex max-w-3xl items-center justify-center">
+          <button
+            className="swiper-prev-button hidden hover:text-gray-500 sm:block sm:rounded sm:text-gray-700 sm:transition"
+            aria-label="Previous slide"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="size-5 rtl:rotate-180"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <div className="swiper">
+            <div className="swiper-wrapper">
+              <div className="swiper-slide">
+                <p className="text-center text-sm font-medium text-gray-900">
+                  Love Alpine JS?
+                  <a href="#" className="block underline sm:inline-block">
+                    {' '}
+                    Check out this new course!{' '}
+                  </a>
+                </p>
+              </div>
+
+              <div className="swiper-slide">
+                <p className="text-center text-sm font-medium text-gray-900">
+                  Love Tailwind CSS?
+                  <a href="#" className="block underline sm:inline-block">
+                    {' '}
+                    Check out this new course!{' '}
+                  </a>
+                </p>
+              </div>
+
+              <div className="swiper-slide">
+                <p className="text-center text-sm font-medium text-gray-900">
+                  Love Laravel?
+                  <a href="#" className="block underline sm:inline-block">
+                    {' '}
+                    Check out this new course!{' '}
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            className="swiper-next-button hidden hover:text-gray-500 sm:block sm:rounded sm:text-gray-700 sm:transition"
+            aria-label="Next slide"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="size-5 rtl:rotate-180"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div className="navbar bg-base-100">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <NavBar props="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow" />
+          </div>
+          <a>
+            <Link prefetch={false} href="/">
+              <Image
+                src={require('@/assets/VALAR-DOHAERYS.png')}
+                alt="valar"
+                height={60}
+              />
+            </Link>
+          </a>
+        </div>
+        <div className="navbar-center hidden lg:flex">
           <NavBar />
         </div>
-        <div className="flex space-x-2 border-l pl-5">
-          <button className=" flex  transition border border-black bg-white hover:bg-black hover:delay-25 text-black hover:text-white font-IBMPlex font-semibold  px-5 py-2  rounded-xl ">
+        <div className="navbar-end">
+          <button className=" flex  transition border border-black bg-white hover:bg-black hover:delay-25 text-black hover:text-white font-IBMPlex font-semibold  px-5 py-2 rounded-xl mr-2  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -35,15 +143,20 @@ export async function TopBar() {
               />
             </svg>
             Checkout
+            {itemCount > 0 && (
+              <div className="ml-2  bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                {itemCount}
+              </div>
+            )}
           </button>
           <button
             onClick={() => router.push('/contact')}
-            className=" transition border border-black bg-valar3 hover:bg-white hover:delay-25 text-black font-IBMPlex font-semibold  px-5 py-2  rounded-xl "
+            className=" transition border border-black bg-valar3 hover:bg-white hover:delay-25 text-black font-IBMPlex font-semibold  px-4 py-2  rounded-xl "
           >
             Contact us
           </button>
         </div>
       </div>
-    </header>
+    </>
   );
 }

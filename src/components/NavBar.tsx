@@ -1,7 +1,10 @@
 'use client';
 import React from 'react';
 
-const NavBar = () => {
+interface NavBarProps {
+  props?: string;
+}
+const NavBar = ({ props }: NavBarProps) => {
   const links = [
     {
       id: 1,
@@ -36,8 +39,8 @@ const NavBar = () => {
   ];
 
   return (
-    <div>
-      <div className="flex space-x-10">
+    <ul tabIndex={0} className={props && `${props}`}>
+      <li className="flex items-center justify-center lg:space-x-10 ">
         {links.map((link) => (
           <a
             href={link.href}
@@ -49,8 +52,8 @@ const NavBar = () => {
             {link.title}
           </a>
         ))}
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 };
 

@@ -19,15 +19,16 @@ const ProductSection = ({ title, description }: ProductSectionProps) => {
           </p>
         </header>
         <ul className="mt-8 grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {Products.map((product) => (
+          {Products.map((product, index) => (
             <ProductCard
-              key={product.id}
+              key={index}
               name={product.name}
               price={product.price}
               currency={product.currency}
               picture={product.picture}
               picture2={product.picture2!}
               showColors={product.showColors!}
+              product={product}
             />
           ))}
         </ul>
