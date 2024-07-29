@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -27,12 +27,19 @@ export function Footer() {
               </a>
             </p>
             <ul className="mt-8 space-y-1 text-xl font-IBMPlex font-semibold text-gray-700">
-              <li>Delivery for all Tunisia 🚀 🇹🇳</li>
+              <li>
+                We ship in less than 48 hours all over Tunisia. 🚀 🇹🇳
+                <br />
+                Buy now, pay later : You order now and pay when the article is
+                received.
+                <br />
+                Delivery costs 7dt.
+              </li>
             </ul>
             <ul className="mt-8 flex gap-6">
               <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61552708599053"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75"
@@ -131,7 +138,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Image
-                    src={require('../../public/valar-logo.png')}
+                    src={require("../../public/valar-logo.png")}
                     alt="logo valar"
                     width={200}
                     height={200}

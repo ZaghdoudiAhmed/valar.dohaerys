@@ -1,8 +1,9 @@
-'use client';
-import Link from 'next/link';
-import NavBar from './NavBar';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+"use client";
+import Link from "next/link";
+import NavBar from "./NavBar";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Script from "next/script";
 
 interface TopBarProps {
   itemCount: number;
@@ -11,8 +12,7 @@ export async function TopBar({ itemCount }: TopBarProps) {
   const router = useRouter();
   return (
     <>
-      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+      <Script src="https://unpkg.com/swiper/swiper-bundle.min.js"></Script>
       <link
         rel="stylesheet"
         href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -44,8 +44,8 @@ export async function TopBar({ itemCount }: TopBarProps) {
                 <p className="text-center text-sm font-medium text-gray-900">
                   Love Alpine JS?
                   <a href="#" className="block underline sm:inline-block">
-                    {' '}
-                    Check out this new course!{' '}
+                    {" "}
+                    Check out this new course!{" "}
                   </a>
                 </p>
               </div>
@@ -54,8 +54,8 @@ export async function TopBar({ itemCount }: TopBarProps) {
                 <p className="text-center text-sm font-medium text-gray-900">
                   Love Tailwind CSS?
                   <a href="#" className="block underline sm:inline-block">
-                    {' '}
-                    Check out this new course!{' '}
+                    {" "}
+                    Check out this new course!{" "}
                   </a>
                 </p>
               </div>
@@ -64,8 +64,8 @@ export async function TopBar({ itemCount }: TopBarProps) {
                 <p className="text-center text-sm font-medium text-gray-900">
                   Love Laravel?
                   <a href="#" className="block underline sm:inline-block">
-                    {' '}
-                    Check out this new course!{' '}
+                    {" "}
+                    Check out this new course!{" "}
                   </a>
                 </p>
               </div>
@@ -116,7 +116,7 @@ export async function TopBar({ itemCount }: TopBarProps) {
           <a>
             <Link prefetch={false} href="/">
               <Image
-                src={require('@/assets/VALAR-DOHAERYS.png')}
+                src={require("@/assets/VALAR-DOHAERYS.png")}
                 alt="valar"
                 height={60}
               />
@@ -149,8 +149,9 @@ export async function TopBar({ itemCount }: TopBarProps) {
               </div>
             )}
           </button>
+
           <button
-            onClick={() => router.push('/contact')}
+            onClick={() => router.push("/contact")}
             className=" transition border border-black bg-valar3 hover:bg-white hover:delay-25 text-black font-IBMPlex font-semibold  px-4 py-2  rounded-xl "
           >
             Contact us

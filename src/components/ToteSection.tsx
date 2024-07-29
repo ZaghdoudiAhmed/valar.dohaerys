@@ -1,12 +1,12 @@
-import { Products } from "@/utils/products";
+import { Totes } from "@/utils/totes";
 import ProductCard from "./ProductCard";
 
-interface ProductSectionProps {
+interface ToteSectionProps {
   title: string;
   description: string;
 }
 
-const ProductSection = ({ title, description }: ProductSectionProps) => {
+const ToteSection = ({ title, description }: ToteSectionProps) => {
   return (
     <section>
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 my-10">
@@ -19,8 +19,8 @@ const ProductSection = ({ title, description }: ProductSectionProps) => {
           </p>
         </header>
         <ul className="mt-8 grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {Products.map((product) => (
-            <ProductCard key={product.slug} product={product} />
+          {Totes.map((tote) => (
+            <ProductCard key={tote.slug} product={tote} />
           ))}
         </ul>
       </div>
@@ -28,4 +28,4 @@ const ProductSection = ({ title, description }: ProductSectionProps) => {
   );
 };
 
-export default ProductSection;
+export default ToteSection;

@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 interface NavBarProps {
   props?: string;
@@ -8,33 +8,33 @@ const NavBar = ({ props }: NavBarProps) => {
   const links = [
     {
       id: 1,
-      title: 'home',
-      href: '/',
+      title: "home",
+      href: "/",
     },
     {
       id: 2,
-      title: 'about',
-      href: '/about',
+      title: "t-shirts",
+      href: "/t-shirts",
     },
     {
       id: 3,
-      title: 'hoodies',
-      href: '/hoodies',
-    },
-    {
-      id: 3,
-      title: 't-shirts',
-      href: '/t-shirts',
+      title: "tote bags",
+      href: "/tote-bags",
     },
     {
       id: 4,
-      title: 'tote bags',
-      href: '/tote-bags',
+      title: "mugs",
+      href: "/mugs",
     },
     {
       id: 5,
-      title: 'mugs',
-      href: '/mugs',
+      title: "hoodies",
+      href: "/hoodies",
+    },
+    {
+      id: 6,
+      title: "about",
+      href: "/about",
     },
   ];
 

@@ -1,39 +1,43 @@
-const TENNIS_TSHIRT = require('@/assets/mockup_tshirt_beige_tennis_centre.jpg');
-const TENNIS_TSHIRT_2 = require('@/assets/mockup_tshirt_beige_tennis_gauche.jpg');
-const FAIROUZ_TSHIRT = require('@/assets/mockup_tshirt_Blanc_Feirouz.jpg');
+const TENNIS_TSHIRT = require("@/assets/mockup_tshirt_beige_tennis_centre.jpg");
+const TENNIS_TSHIRT_2 = require("@/assets/mockup_tshirt_beige_tennis_gauche.jpg");
+const FAIROUZ_TSHIRT = require("@/assets/mockup_tshirt_Blanc_Feirouz.jpg");
 
-const ALIEN_TSHIRT = require('@/assets/mockup_tshirt_rose_epeche_alien.jpg');
-const ALIEN_TSHIRT_2 = require('@/assets/mockup_tshirt_rose_peche_alien_gauche.jpg');
-const ALIEN_WHITE = require('@/assets/mockup_tshirt_blanc_alien.jpg');
-const ALIEN_WHITE_2 = require('@/assets/mockup_tshirt_blanc_alien_gauche.jpg');
+const ALIEN_TSHIRT = require("@/assets/mockup_tshirt_rose_epeche_alien.jpg");
+const ALIEN_TSHIRT_2 = require("@/assets/mockup_tshirt_rose_peche_alien_gauche.jpg");
+const ALIEN_WHITE = require("@/assets/mockup_tshirt_blanc_alien.jpg");
+const ALIEN_WHITE_2 = require("@/assets/mockup_tshirt_blanc_alien_gauche.jpg");
 
-const GIRL_PURPULE = require('@/assets/mockup_tshirt_mauve.jpg');
-const GIRL_PURPULE_2 = require('@/assets/mockup_tshirt_mauve_gauche.jpg');
+const GIRL_PURPULE = require("@/assets/mockup_tshirt_mauve.jpg");
+const GIRL_PURPULE_2 = require("@/assets/mockup_tshirt_mauve_gauche.jpg");
 
-const GIRL_WHITE = require('@/assets/mockup_tshirt_blanc.jpg');
-const GIRL_WHITE_2 = require('@/assets/mockup_tshirt_blanc_gauche.jpg');
+const CAPRICORN_TSHIRT = require("@/assets/capricorn.jpg");
+const GIRL_WHITE = require("@/assets/mockup_tshirt_blanc.jpg");
+const GIRL_WHITE_2 = require("@/assets/mockup_tshirt_blanc_gauche.jpg");
 
-const TWIN_PEAKS_TSHIRT = require('@/assets/MOCKUP_TSHIRT_noir.jpg');
-const TWIN_PEAKS_TSHIRT_2 = require('@/assets/MOCKUP_TSHIRT_noir_2.jpg');
+const TWIN_PEAKS_TSHIRT = require("@/assets/MOCKUP_TSHIRT_noir.jpg");
+const TWIN_PEAKS_TSHIRT_2 = require("@/assets/MOCKUP_TSHIRT_noir_2.jpg");
 
-const PALESTINE_TSHIRT = require('@/assets/mockup_tshirt_Blanc_palest_2.jpg');
-const PALESTINE_TSHIRT_2 = require('@/assets/mockup_tshirt_blanc_palestine.jpg');
+const PALESTINE_TSHIRT = require("@/assets/mockup_tshirt_Blanc_palest_2.jpg");
+const PALESTINE_TSHIRT_2 = require("@/assets/mockup_tshirt_blanc_palestine.jpg");
 
-const PALESTINE_TSHIRT_FROM = require('@/assets/mockup_tshirt_blanc_pales_from.jpg');
+const PALESTINE_TSHIRT_FROM = require("@/assets/mockup_tshirt_blanc_pales_from.jpg");
+const PALESTINE_TSHIRT_FROM_2 = require("@/assets/from2.JPG");
+const PALESTINE_TSHIRT_WATER = require("@/assets/water.JPG");
+const PALESTINE_TSHIRT_WATER_2 = require("@/assets/water2.JPG");
 
-const BASIC_TSHIRTS = require('@/assets/md-salman-tWOz2_EK5EQ-unsplash.jpg');
+const BASIC_TSHIRTS = require("@/assets/md-salman-tWOz2_EK5EQ-unsplash.jpg");
 
-const DISNEY_TSHIRT = require('@/assets/mockup_tshirt_bleu_ciel_2.jpg');
-const DISNEY_TSHIRT_2 = require('@/assets/mockup_tshirt_bleu_ciel_3.jpg');
+const DISNEY_TSHIRT = require("@/assets/mockup_tshirt_bleu_ciel_2.jpg");
+const DISNEY_TSHIRT_2 = require("@/assets/mockup_tshirt_bleu_ciel_3.jpg");
 
-const COLLAGE_TSHIRT = require('@/assets/mockup_tshirt_beige_collage.jpg');
-const COLLAGE_TSHIRT_2 = require('@/assets/mockup_tshirt_rouge_bordeau_collage.jpg');
+const COLLAGE_TSHIRT = require("@/assets/mockup_tshirt_beige_collage.jpg");
+const COLLAGE_TSHIRT_2 = require("@/assets/mockup_tshirt_rouge_bordeau_collage.jpg");
 
-const CAIROKEE_TSHIRT = require('@/assets/mockup_tshirt_Camel_1.jpg');
-const CAIROKEE_TSHIRT_2 = require('@/assets/mockup_tshirt_Camel_2.jpg');
+const CAIROKEE_TSHIRT = require("@/assets/mockup_tshirt_Camel_1.jpg");
+const CAIROKEE_TSHIRT_2 = require("@/assets/mockup_tshirt_Camel_2.jpg");
 
-const LUFY_TSHIRT = require('@/assets/mockup_tshirt_Blanc_luffy.jpg');
-const LUFY_TSHIRT_2 = require('@/assets/MOCKUP_TSHIRT_noir_luffy.jpg');
+const LUFY_TSHIRT = require("@/assets/mockup_tshirt_Blanc_luffy.jpg");
+const LUFY_TSHIRT_2 = require("@/assets/MOCKUP_TSHIRT_noir_luffy.jpg");
 
 export interface Item {
   id: number;
@@ -50,6 +54,7 @@ export interface Color {
 export interface Product {
   id: number;
   name: string;
+  slug: string;
   picture: any;
   picture2?: any;
   colors: Color[];
@@ -62,36 +67,40 @@ export interface Product {
 export const Products = [
   {
     id: 1,
-    name: 'basic t-shirt',
+    name: "basic t-shirt",
+    slug: "basic_t_shirts",
     picture: BASIC_TSHIRTS,
     showColorsBasics: true,
     price: 22,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 2,
-    name: 'tennis t-shirt',
+    name: "tennis t-shirt",
+    slug: "tennis_t_shirts",
     picture: TENNIS_TSHIRT,
     picture2: TENNIS_TSHIRT_2,
     price: 35,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 3,
-    name: 'fairouz t-shirt',
+    name: "fairouz t-shirt",
+    slug: "fairouz_t_shirts",
     picture: FAIROUZ_TSHIRT,
     price: 36,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 4,
-    name: 'alien t-shirt',
+    name: "alien t-shirt",
+    slug: "alien_t_shirts",
     showColors: true,
     colors: [
       {
         id: 1,
-        refColor: '#e4aca5',
-        name: 'peche',
+        refColor: "bg-[#e4aca5]",
+        name: "peche",
         items: [
           {
             id: 11,
@@ -102,8 +111,8 @@ export const Products = [
       },
       {
         id: 2,
-        refColor: '#fff',
-        name: 'white',
+        refColor: "bg-[#fff]",
+        name: "white",
         items: [
           {
             id: 21,
@@ -114,17 +123,18 @@ export const Products = [
       },
     ],
     price: 38,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 5,
-    name: 'Girl t-shirt',
+    name: "Girl t-shirt",
+    slug: "girl_t_shirts",
     showColors: true,
     colors: [
       {
         id: 1,
-        refColor: '#e4aca5',
-        name: 'peche',
+        refColor: "bg-[#e4aca5]",
+        name: "peche",
         items: [
           {
             id: 11,
@@ -135,8 +145,8 @@ export const Products = [
       },
       {
         id: 2,
-        refColor: '#fff',
-        name: 'white',
+        refColor: "bg-[#fff]",
+        name: "white",
         items: [
           {
             id: 12,
@@ -147,67 +157,95 @@ export const Products = [
       },
       {
         id: 3,
-        refColor: '#b964b9',
-        name: 'violet',
+        refColor: "bg-[#b964b9]",
+        name: "violet",
         items: [],
       },
     ],
     price: 39,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 6,
-    name: 'Palestine t-shirt',
+    name: "Palestine t-shirt",
+    slug: "palestine_t_shirts",
     picture: PALESTINE_TSHIRT,
     picture2: PALESTINE_TSHIRT_2,
     price: 34,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 7,
-    name: 'Twin peacks t-shirt',
+    name: "Twin peacks t-shirt",
+    slug: "twin_peacks_t_shirts",
     picture: TWIN_PEAKS_TSHIRT,
     picture2: TWIN_PEAKS_TSHIRT_2,
     price: 38,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 8,
-    name: 'Disney t-shirt',
+    name: "Disney t-shirt",
+    slug: "disney_t_shirts",
     picture: DISNEY_TSHIRT_2,
     picture2: DISNEY_TSHIRT,
     price: 38,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 9,
-    name: 'Collage Artists t-shirt',
+    name: "Collage Artists t-shirt",
+    slug: "collage_artists_t_shirts",
     picture: COLLAGE_TSHIRT,
     picture2: COLLAGE_TSHIRT_2,
     price: 39,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 10,
-    name: 'Cairokee t-shirt',
+    name: "Cairokee t-shirt",
+    slug: "cairokee_t_shirts",
     picture: CAIROKEE_TSHIRT,
     picture2: CAIROKEE_TSHIRT_2,
     price: 45,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 11,
-    name: 'Luffy t-shirt',
+    name: "Luffy t-shirt",
+    slug: "luffy_t_shirts",
+
     picture: LUFY_TSHIRT,
     picture2: LUFY_TSHIRT_2,
     price: 39,
-    currency: 'TND',
+    currency: "TND",
   },
   {
     id: 12,
-    name: 'Palestine t-shirt',
+    name: "Palestine From t-shirt",
+    slug: "palestine_from_t_shirts",
+
     picture: PALESTINE_TSHIRT_FROM,
+    picture2: PALESTINE_TSHIRT_FROM_2,
     price: 39,
-    currency: 'TND',
+    currency: "TND",
+  },
+  {
+    id: 13,
+    name: "Watermelon t-shirt",
+    slug: "watermelon_t_shirts",
+
+    picture: PALESTINE_TSHIRT_WATER,
+    picture2: PALESTINE_TSHIRT_WATER_2,
+    price: 37,
+    currency: "TND",
+  },
+  {
+    id: 14,
+    name: "Capricorn t-shirt",
+    slug: "capricorn_t_shirts",
+    picture: CAPRICORN_TSHIRT,
+    price: 32,
+    currency: "TND",
   },
 ];

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import ProductSection from '@/components/ProductSection';
-import ShoppingCart from '@/components/ShoppingCart';
-import React, { useEffect, useState } from 'react';
+import ProductSection from "@/components/ProductSection";
+import ShoppingCart from "@/components/ShoppingCart";
+import React, { useEffect, useState } from "react";
 
 export default function Page() {
   const [openCart, setOpenCart] = useState<boolean>(false);
@@ -12,7 +12,10 @@ export default function Page() {
   }, [openCart]);
   return (
     <>
-      <ProductSection title={'products collection'} description="hello" />
+      <ProductSection
+        title={"Our T-shirts collection is out !!"}
+        description={"Can't wait "}
+      />
       {openCart && (
         <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} />
       )}

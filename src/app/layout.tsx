@@ -1,7 +1,7 @@
-import './globals.css';
-import { TopBar } from '@/components/TopBar';
-import { Footer } from '@/components/Footer';
-import MarkPopup from '@/components/MarkPopup';
+import "./globals.css";
+import { TopBar } from "@/components/TopBar";
+import { Footer } from "@/components/Footer";
+import MarkPopup from "@/components/MarkPopup";
 
 export default function RootLayout({
   children,
@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TopBar />
+        <TopBar itemCount={0} />
         <main> {children}</main>
         <MarkPopup />
         <Footer />

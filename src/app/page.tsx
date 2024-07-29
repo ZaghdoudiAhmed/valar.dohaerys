@@ -1,4 +1,4 @@
-import TestimonialSection from '@/components/TestimonialsSection';
+import TestimonialSection from "@/components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -17,15 +17,14 @@ export default function Home() {
             <div className="relative flex items-center bg-gray-100">
               <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100" />
               <div className="p-8 sm:p-16 lg:p-24">
-                <h2 className="text-2xl font-bold font-IBMPlex sm:text-3xl">
+                <h2 className="text-2xl tracking-wide font-bold font-IBMPlex sm:text-3xl">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Tempore, debitis.
                 </h2>
-                <p className="mt-4  font-IBMPlex text-gray-600">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Aliquid, molestiae! Quidem est esse numquam odio deleniti,
-                  beatae, magni dolores provident quaerat totam eos, aperiam
-                  architecto eius quis quibusdam fugiat dicta.
+                <p className="mt-4 tracking-wide font-IBMPlex text-gray-600">
+                  Valar Dohaerys is a 100% tunisian eco-friendly brand created
+                  in 2023 offering high quality clothing and using high-quality
+                  premium materials ( cotton represents 100% of our fabric ).
                 </p>
                 <a
                   href="/contact"
@@ -105,13 +104,12 @@ export default function Home() {
         <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold font-IBMPlex text-gray-900 sm:text-4xl">
-              Trusted by eCommerce Businesses
+              We think green 🌱 ♻️
             </h2>
 
             <p className="mt-4 text-gray-500 font-IBMPlex sm:text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              dolores laborum labore provident impedit esse recusandae facere
-              libero harum sequi.
+              Our products are delivered in a plastic-free, recyclable and
+              reusable packaging.
             </p>
           </div>
 
