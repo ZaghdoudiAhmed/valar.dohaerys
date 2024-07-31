@@ -44,8 +44,7 @@ export async function TopBar({ itemCount }: TopBarProps) {
                 <p className="text-center text-sm font-medium text-gray-900">
                   Love Alpine JS?
                   <a href="#" className="block underline sm:inline-block">
-                    {" "}
-                    Check out this new course!{" "}
+                    Check out this new course!
                   </a>
                 </p>
               </div>
@@ -54,8 +53,7 @@ export async function TopBar({ itemCount }: TopBarProps) {
                 <p className="text-center text-sm font-medium text-gray-900">
                   Love Tailwind CSS?
                   <a href="#" className="block underline sm:inline-block">
-                    {" "}
-                    Check out this new course!{" "}
+                    Check out this new course!
                   </a>
                 </p>
               </div>
@@ -64,8 +62,7 @@ export async function TopBar({ itemCount }: TopBarProps) {
                 <p className="text-center text-sm font-medium text-gray-900">
                   Love Laravel?
                   <a href="#" className="block underline sm:inline-block">
-                    {" "}
-                    Check out this new course!{" "}
+                    Check out this new course!
                   </a>
                 </p>
               </div>
@@ -92,8 +89,8 @@ export async function TopBar({ itemCount }: TopBarProps) {
         </div>
       </div>
 
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
+      <div className="flex items-center justify-between bg-base-100">
+        <div className="flex">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -123,11 +120,11 @@ export async function TopBar({ itemCount }: TopBarProps) {
             </Link>
           </a>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className=" hidden lg:flex">
           <NavBar />
         </div>
-        <div className="navbar-end">
-          <button className=" flex  transition border border-black bg-white hover:bg-black hover:delay-25 text-black hover:text-white font-IBMPlex font-semibold  px-5 py-2 rounded-xl mr-2  ">
+        <div className=" flex flex-row">
+          <button className="flex transition border border-black bg-white hover:bg-black hover:delay-25 text-black hover:text-white font-IBMPlex font-semibold  px-5 py-2 rounded-xl mr-2  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

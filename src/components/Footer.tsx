@@ -11,7 +11,7 @@ export function Footer() {
       </div>
       <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-          <div className="flex-col space-y-5 ">
+          <div className="flex-col space-y-5 p-5 ">
             <p className="text-xl font-IBMPlex font-bold">
               Tunisian brand offering high quality of clothing ✨
             </p>
@@ -26,15 +26,13 @@ export function Footer() {
                 +216 27 224 119
               </a>
             </p>
-            <ul className="mt-8 space-y-1 text-xl font-IBMPlex font-semibold text-gray-700">
+            <ul className="mt-8 space-y-2 text-md font-IBMPlex font-semibold text-gray-700 list-disc">
+              <li>We ship in less than 48 hours all over Tunisia. 🚀 🇹🇳</li>
               <li>
-                We ship in less than 48 hours all over Tunisia. 🚀 🇹🇳
-                <br />
                 Buy now, pay later : You order now and pay when the article is
                 received.
-                <br />
-                Delivery costs 7dt.
               </li>
+              <li>Delivery costs 7dt.</li>
             </ul>
             <ul className="mt-8 flex gap-6">
               <li>
@@ -88,7 +86,7 @@ export function Footer() {
               <p className="font-semibold text-gray-900 font-IBMPlex ">
                 Collections
               </p>
-              <ul className="mt-6 space-y-4 text-sm">
+              <ul className="mt-6 space-y-4 text-sm ">
                 <li>
                   <a
                     href="/t-shirts"

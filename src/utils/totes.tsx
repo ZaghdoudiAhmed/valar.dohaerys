@@ -1,12 +1,9 @@
-const LEMON_TOTE = require("@/assets/tote/tote5.JPG");
-
-const QUEEN_TOTE = require("@/assets/tote/tote1.JPG");
-
-const QUEEN_TOTE_2 = require("@/assets/tote/tote2.JPG");
-
-const FOU_TOTE = require("@/assets/tote/tote4.JPG");
-
-const FOUT_TOTE = require("@/assets/tote/tote3.JPG");
+import LEMON_TOTE from "@/assets/tote/tote5.jpg";
+import QUEEN_TOTE from "@/assets/tote/tote1.jpg";
+import QUEEN_TOTE_2 from "@/assets/tote/tote2.jpg";
+import FOU_TOTE from "@/assets/tote/tote4.jpg";
+import FOUT_TOTE from "@/assets/tote/tote3.jpg";
+import CHOUFLI_TOTE from "@/assets/tote/tote6.jpg";
 
 export interface Tote {
   id: number;
@@ -17,7 +14,7 @@ export interface Tote {
   currency: string;
 }
 
-export const Totes = [
+export const TOTES = [
   {
     id: 1,
     name: "Lemon Tote-bag",
@@ -55,6 +52,14 @@ export const Totes = [
     name: "Amour Fout Tote-bag",
     slug: "amour_fout_tote_bag",
     picture: FOUT_TOTE,
+    price: 25,
+    currency: "TND",
+  },
+  {
+    id: 6,
+    name: "Choufli Hal Tote-bag",
+    slug: "choufli_hal_tote_bag",
+    picture: CHOUFLI_TOTE,
     price: 25,
     currency: "TND",
   },
