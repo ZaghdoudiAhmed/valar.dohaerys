@@ -1,5 +1,5 @@
-import { Totes } from "@/utils/totes";
-import ProductCard from "./ProductCard";
+import { TOTES } from "@/utils/totes";
+import ToteCard from "./ToteCard";
 
 interface ToteSectionProps {
   title: string;
@@ -19,8 +19,8 @@ const ToteSection = ({ title, description }: ToteSectionProps) => {
           </p>
         </header>
         <ul className="mt-8 grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {Totes.map((tote) => (
-            <ProductCard key={tote.slug} product={tote} />
+          {TOTES.map((tote) => (
+            <ToteCard key={tote.slug} product={tote} />
           ))}
         </ul>
       </div>

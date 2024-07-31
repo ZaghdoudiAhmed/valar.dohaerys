@@ -26,15 +26,13 @@ export function Footer() {
                 +216 27 224 119
               </a>
             </p>
-            <ul className="mt-8 space-y-1 text-xl font-IBMPlex font-semibold text-gray-700">
+            <ul className="mt-8 space-y-2 text-md font-IBMPlex font-semibold text-gray-700 list-disc">
+              <li>We ship in less than 48 hours all over Tunisia. 🚀 🇹🇳</li>
               <li>
-                We ship in less than 48 hours all over Tunisia. 🚀 🇹🇳
-                <br />
                 Buy now, pay later : You order now and pay when the article is
                 received.
-                <br />
-                Delivery costs 7dt.
               </li>
+              <li>Delivery costs 7dt.</li>
             </ul>
             <ul className="mt-8 flex gap-6">
               <li>

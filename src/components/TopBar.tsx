@@ -44,8 +44,7 @@ export async function TopBar({ itemCount }: TopBarProps) {
                 <p className="text-center text-sm font-medium text-gray-900">
                   Love Alpine JS?
                   <a href="#" className="block underline sm:inline-block">
-                    {" "}
-                    Check out this new course!{" "}
+                    Check out this new course!
                   </a>
                 </p>
               </div>
@@ -54,8 +53,7 @@ export async function TopBar({ itemCount }: TopBarProps) {
                 <p className="text-center text-sm font-medium text-gray-900">
                   Love Tailwind CSS?
                   <a href="#" className="block underline sm:inline-block">
-                    {" "}
-                    Check out this new course!{" "}
+                    Check out this new course!
                   </a>
                 </p>
               </div>
@@ -64,8 +62,7 @@ export async function TopBar({ itemCount }: TopBarProps) {
                 <p className="text-center text-sm font-medium text-gray-900">
                   Love Laravel?
                   <a href="#" className="block underline sm:inline-block">
-                    {" "}
-                    Check out this new course!{" "}
+                    Check out this new course!
                   </a>
                 </p>
               </div>
